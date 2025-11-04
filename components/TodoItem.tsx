@@ -1,7 +1,11 @@
-'use client';
-import { Todo } from '../lib/types';
+"use client";
+import { Todo } from "../lib/types";
 
-export default function TodoItem({ todo, onToggle, onDelete } : {
+export default function TodoItem({
+  todo,
+  onToggle,
+  onDelete,
+}: {
   todo: Todo;
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
@@ -15,7 +19,12 @@ export default function TodoItem({ todo, onToggle, onDelete } : {
         checked={todo.completed}
         onChange={() => onToggle(todo.id)}
       />
-      <label htmlFor={`todo-${todo.id}`} className={`flex-1 ${todo.completed ? 'line-through text-slate-400' : ''}`}>
+      <label
+        htmlFor={`todo-${todo.id}`}
+        className={`flex-1 ${
+          todo.completed ? "line-through text-slate-400" : ""
+        }`}
+      >
         {todo.title}
       </label>
       <button
