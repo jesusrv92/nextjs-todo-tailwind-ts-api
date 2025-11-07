@@ -13,6 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      </head>
       <body className="min-h-screen text-slate-900 antialiased">
         <div className="mx-auto max-w-2xl p-6">{children}</div>
       </body>
